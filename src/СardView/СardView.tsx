@@ -6,7 +6,7 @@ interface ICardViewProps {
 }
 
 const CardView: React.FC<ICardViewProps> = props => {
-    const cardClasses = `card rank-${props.rank} ${props.suit}`
+    const cardClasses = `card rank-${props.rank.toLowerCase()} ${props.suit}`
     return (
         <div className="playingCards faceImages">
             <span className={cardClasses}>

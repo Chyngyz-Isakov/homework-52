@@ -10,10 +10,32 @@ class CardDeck {
             this.ranks.forEach(rank => {
                 const card = new Card(rank, suit);
                 this.deck.push(card);
-            })
-        })
+            });
+        });
+    };
+
+    getCard(): Card {
+        const randomCardIndex:number = Math.floor(Math.random() * this.deck.length);
+        const randomCardObject = this.deck[randomCardIndex];
+        this.deck.splice(randomCardIndex, 1);
+
+        return randomCardObject;
+    }
+
+    getCards(howMany: number): Card[]{
+        let randomCardsDeck: Card[] = [];
+        let i = 0;
+        // if (howMany === ''){
+        //     howMany = 5;
+        // }
+
+        while (i < howMany){
+            const ranDeck = this.getCard()
+            randomCardsDeck.push(ranDeck);
+            i++;
+        }
+        return randomCardsDeck;
     }
 }
-
 
 export default CardDeck;
