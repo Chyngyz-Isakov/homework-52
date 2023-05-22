@@ -7,8 +7,6 @@ import './App.css';
 import PokerHand from "./lib/PokerHand";
 
 
-
-
 const App = () => {
     const [cards, setCards] = useState<Card []>([]);
 

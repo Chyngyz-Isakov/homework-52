@@ -23,9 +23,7 @@ class PokerHand {
 
         if (suits === 20){
             pokerHandShow = 'Flush';
-        }
-
-        if (count === 2) {
+        }else if (count === 2) {
             pokerHandShow = 'one pair';
         } else if (count === 6) {
             pokerHandShow = 'three of a kind';
