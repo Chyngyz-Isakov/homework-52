@@ -15,22 +15,22 @@ class PokerHand {
                 if (this.cards[i].rank === this.cards[j].rank && this.cards[i].suit !== this.cards[j].suit) {
                     count++;
                 }
-                if (this.cards[i].suit === this.cards[j].suit && this.cards[i].rank !== this.cards[j].rank){
+                if (this.cards[i].suit === this.cards[j].suit && this.cards[i].rank !== this.cards[j].rank) {
                     suits++;
                 }
             }
         }
 
-        if (suits === 20){
+        if (suits === 20) {
             pokerHandShow = 'Flush';
-        }else if (count === 2) {
-            pokerHandShow = 'one pair';
+        } else if (count === 2) {
+            pokerHandShow = 'One Pair';
         } else if (count === 6) {
-            pokerHandShow = 'three of a kind';
+            pokerHandShow = 'Three of a kind';
         } else if (count === 4) {
-            pokerHandShow = 'two pairs';
+            pokerHandShow = 'Two pairs';
         } else {
-            pokerHandShow = 'no combo';
+            pokerHandShow = 'No combo';
         }
         return pokerHandShow;
     }

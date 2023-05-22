@@ -27,7 +27,7 @@ class CardDeck {
         let i = 0;
 
         while (i < howMany) {
-            const ranDeck = this.getCard()
+            const ranDeck = this.getCard();
             randomCardsDeck.push(ranDeck);
             i++;
         }

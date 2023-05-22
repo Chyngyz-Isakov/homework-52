@@ -6,18 +6,18 @@ interface ICardViewProps {
 }
 
 const CardView: React.FC<ICardViewProps> = props => {
-    const cardClasses = `card rank-${props.rank.toLowerCase()} ${props.suit}`
+    const cardClasses = `card rank-${props.rank.toLowerCase()} ${props.suit}`;
 
-    let ic: string = '';
+    let ic = '';
 
     if (props.suit === 'diams') {
         ic = '♦';
     } else if (props.suit === 'clubs') {
-        ic = '♣'
+        ic = '♣';
     } else if (props.suit === 'hearts') {
-        ic = '♥'
+        ic = '♥';
     } else {
-        ic = '♠'
+        ic = '♠';
     }
 
     return (
